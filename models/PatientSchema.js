@@ -1,0 +1,70 @@
+const mongoose=require("mongoose")
+const patientSchema=mongoose.Schema({
+    doctorId:{
+        type:Number,
+        required:true
+    },
+    ClinicId:{
+        type:Number,
+        required:true
+    },
+    Title:{
+        type:String,
+        required:true
+    },
+    firstname:{
+        type:String,
+        required:true
+    },
+    lastname:{
+        type:String,
+        required:true
+    },
+    address:{
+        type:String,
+        required:true
+    },
+    city:{
+        type:String,
+        required:true
+    },
+    state:{
+        type:String,
+        required:true
+    },
+    Pincode:{
+        type:String,
+        required:true
+    },
+    Country:{
+        type:String,
+        required:true
+    },
+    patient_bp:{
+        type:String,
+        required:true
+    },
+    patient_plus:{
+        type:String,
+        required:true
+    },
+    patient_temp:{
+        type:String,
+        required:true
+    },
+patient_weight:{
+    type:String,
+    required:true
+},
+ShortNote:{
+    type:String,
+    required:true
+}
+,
+prescriptionNote:{
+    type:String,
+    required:true
+}
+},{timestamps:true})
+const patient=mongoose.model('PATIENT',patientSchema)
+module.exports=patient
